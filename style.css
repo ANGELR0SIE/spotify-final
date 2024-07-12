@@ -24,10 +24,10 @@ html {
 body{
   overflow-y: hidden;
   background-color: #121212;
+  overflow-y: scroll;
 }
 .main{
     /* height: 100%; */
-    width: 100vw;
     z-index: 0;
     position: relative;
     /* overflow: hidden; */
@@ -85,7 +85,7 @@ body{
     display: flex;
     margin-left: 16px;
 }
-.margin-top-56{
+.margn-top-56px{
     margin-top: 56px;
     overflow: hidden;
 }
@@ -93,7 +93,6 @@ body{
 .card-flexes{
     padding: 0 16px 16px;
     box-sizing: border-box;
-    width: 100vw;
 }
 .container {
     display: flex;
@@ -158,19 +157,16 @@ body{
 .scrollable-container {
     display: flex;
     gap: 0px;
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
     overflow-x: auto;  
+    margin-left: -16px;
     scrollbar-width: none; 
 }
-footer{
+#for-mobile-footer{
     padding: 8px 16px 40px;
+    overflow-x: scroll;
 }
 .footer-containers{
     margin-bottom: 38px;
@@ -310,21 +306,36 @@ hr{
     display: none;
 }
 
-
+@media(min-width:740px){
+  .footer-containers-flex-row{
+    display: flex;
+  
+  }
+  .footer-containers-flex1{
+    display: flex;
+    gap: 250px;
+  }
+  .footer-containers-flex-column{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
 @media(min-width:860px){
     body {
         background-color: #000;
         margin: 0;
         overflow-y: hidden;
       }
-      /* .nav{
+      .nav{
         display: none;
-      } */
-      .main-divisions {
+      }
+      .main-divson {
         grid-template-rows: 1fr auto;
         height: 100%;
         display: flex;
         flex-flow: column;
+        padding: 8px;
       }
       
       .top {
@@ -332,10 +343,12 @@ hr{
         display: flex;
         flex-flow: row;
       }
-      
+      /* .left-side-bar */
+
       .left-side-bar {
         display: flex;
-        min-width: 360px;
+        /* min-width: 360px; */
+        min-width: 420px;
         max-width: 420px;
         position: relative;
         background-color: #000;
@@ -429,19 +442,12 @@ hr{
       .your-library-plus {
       }
       .left-side-bar-flex {
-        height: 62%;
-        overscroll-behavior-y: contain;
         overflow: hidden;
         display: flex;
-        align-items: stretch;
-        flex-wrap: nowrap;
         position: relative;
         margin-right: 0px;
         margin-bottom: 0px;
         margin-left: 0px;
-        top: 0px;
-        right: auto;
-        left: 0px;
         padding: 0px;
         gap: 8px;
         padding: 0px 8px;
@@ -584,21 +590,24 @@ hr{
       }
       /* sde-bar */
       
-      .right-main-bar{
+     .rght-sde-main{
           display: flex;
           flex-direction: column;
          flex: 1;
           padding: 0px;
           margin: 0px;
-          z-index: 2;
-         margin-bottom: 16px;
+          z-index: 1;
+          overflow-y:scroll ;
+          scrollbar-width: none;
+          /* display: none; */
+         /* margin-bottom: 16px; */
       }
       .right-main-bar-nav{
           background-color: #121212;
           height: 64px;
           z-index: 1;
           position: absolute;
-          top: 0;
+          top: 8px;
           right: 0;
           left: 437px;
           align-items: center;
@@ -630,6 +639,23 @@ hr{
           flex-grow: 1;
       }
       #for-mobile-footer{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        justify-content: space-between;
+        min-width: 100%;
+      }
+      hr{
+        display: none;
+      }
+      .c-2024{
+        display: none;
+      }
+      #for-mobile-footer .legal{
+        display: none;
+      }
+      .english{
         display: none;
       }
       .right-main-bar-buttons{
@@ -668,61 +694,132 @@ hr{
       padding: 8px 32px;
       margin-right: 32px;
       }
-      .right-main-bar{
-        
-      }
-      
       .margin-top-56{
           margin-top: 0px;
-          width: 100%;
           overflow: hidden;
           
       }
+      
       .container-head{
-          margin-top: 29px;
-      margin-left: 16px;
+          margin-top: 36px;
+      margin-left: 14px;
       }
+   
       .container-head h2{
           font-size: 16px;
       }
       .card-flexes{
-          padding:0 ;
-          overflow: hidden;
-      
-      }
+        padding: 0;
+    }
       .container{
-          width: 100%;
+        margin-left: 9px;
           box-sizing: border-box;
           overflow: hidden;
-      
-      }
+          background-color: #121212;
+        }
+        .spacer{
+          display: none;
+        }
       .scrollable-container{
           display: grid; 
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(2, 1fr);
            overflow: hidden;
-      
+          margin-left: 0;
       }
       .artist-card:nth-child(n+3){
           display: none;
       }
-      .card-image img{
+      #round .card-image img{
           border-radius: 50%;
       
       }
       .artist-card{
-          max-inline-size: 100%;
-          min-inline-size: 100%;
+          max-width: 100%;
       }
       .card-image img{
-          width: 100%;
           display: flex;
           justify-content: center;
       }
       #first-container{
-          margin-top: 49px;
           padding: 0px;
           background-color: rgb(83,83,83);
          background-image: linear-gradient(rgba(0,0,0,0.6),#121212); 
+      } 
+    }   
+    @media(min-width:945px){
+      .scrollable-container {
+          grid-template-columns: repeat(3, 1fr);
       }
-      
-}
+      .artist-card:nth-child(n+4) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+3) {
+          display: block;
+      }
+  }
+  @media(min-width:1090px){
+      .scrollable-container {
+          grid-template-columns: repeat(4, 1fr);
+      }
+      .artist-card:nth-child(n+5) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+4) {
+          display: block;
+      }
+  }
+  @media(min-width:1250px){
+      .scrollable-container {
+          grid-template-columns: repeat(5, 1fr);
+      }
+      .artist-card:nth-child(n+6) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+5) {
+          display: block;
+      }
+  }
+  @media(min-width:1410px){
+      .scrollable-container {
+          grid-template-columns: repeat(6, 1fr);
+      }
+      .artist-card:nth-child(n+7) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+6) {
+          display: block;
+      }
+  }
+  /* @media(min-width:1410px){
+      .scrollable-container {
+          grid-template-columns: repeat(7, 1fr);
+      }
+      .artist-card:nth-child(n+8) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+7) {
+          display: block;
+      }
+  } */
+  @media(min-width:1660px){
+      .scrollable-container {
+          grid-template-columns: repeat(6, 1fr);
+      }
+      .artist-card:nth-child(n+7) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+6) {
+          display: block;
+      }
+  }
+  @media(min-width:1722px){
+      .scrollable-container {
+          grid-template-columns: repeat(7, 1fr);
+      }
+      .artist-card:nth-child(n+8) {
+          display: none;
+      }
+      .artist-card:nth-child(-n+7) {
+          display: block;
+      }
+  }

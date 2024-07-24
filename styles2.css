@@ -1,0 +1,115 @@
+@media (min-width: 932px) {
+  .scrollable-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .artist-card:nth-child(n + 4) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 3) {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  #forward-arrow {
+    display: flex;
+    margin-left: 8px;
+  }
+}
+@media (min-width: 1090px) {
+  .scrollable-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .artist-card:nth-child(n + 5) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 4) {
+    display: block;
+  }
+}
+@media (min-width: 1172px) {
+  .container-head h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1250px) {
+  .scrollable-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .artist-card:nth-child(n + 6) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 5) {
+    display: block;
+  }
+}
+@media (min-width: 1410px) {
+  .scrollable-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .artist-card:nth-child(n + 7) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 6) {
+    display: block;
+  }
+}
+@media (min-width: 1460px) {
+  .right-main-bar-nav {
+    padding: 0px 1px;
+  }
+  .card-image img {
+    width: 100%;
+  }
+}
+@media (min-width: 1520px) {
+  .right-main-bar-nav {
+    padding: 0px 2px;
+  }
+  .card-image img {
+    width: 100%;
+  }
+}
+@media (min-width: 1576px) {
+  .scrollable-container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .artist-card:nth-child(n + 8) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 7) {
+    display: block;
+  }
+}
+@media (min-width: 1610px) {
+  .right-main-bar-nav {
+    padding: 0px 4px;
+  }
+  .card-image img {
+    width: 100%;
+  }
+}
+@media (min-width: 1660px) {
+  .scrollable-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .artist-card:nth-child(n + 7) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 6) {
+    display: block;
+  }
+}
+@media (min-width: 1722px) {
+  .scrollable-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .artist-card:nth-child(n + 7) {
+    display: none;
+  }
+  .artist-card:nth-child(-n + 6) {
+    display: block;
+  }
+  .right-main-bar-nav {
+    padding: 0px 8px;
+  }
+}

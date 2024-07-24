@@ -14,12 +14,30 @@
   font-family: font4;
   src: url("https://encore.scdn.co/fonts/CircularSpTitle-Black-4588c99025b967475c31695b0743dd1a.woff2");
 }
-
+@font-face {
+  font-family: font5;
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2");
+}
+@font-face {
+  font-family: font6;
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2");
+}
+@font-face {
+  font-family: font7;
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitle-Extrabold-ba6c73cd7f82c81e49cf2204017803ed.woff2");
+}
+@font-face {
+  font-family: font8;
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2");
+}
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+a{
+  text-decoration: none;
 }
 body {
   overflow-y: hidden;
@@ -52,6 +70,9 @@ body {
   background: transparent;
   padding-top: 3px;
 }
+.spotifiy-log-nav svg{
+ fill: #fff;
+}
 .nav-spacer-flex-1 {
   flex: 1;
 }
@@ -78,7 +99,7 @@ body {
 }
 .nav-open-app span {
   position: relative;
-  font-family: font3;
+  font-family: font5;
   font-size: 13px;
 }
 .nav-threeline {
@@ -106,7 +127,7 @@ body {
 }
 .container-head h2 {
   font-size: 20px;
-  font-family: font2;
+  font-family: font8;
   color: #fff;
   margin: 0;
 }
@@ -146,12 +167,20 @@ min-width: 152px;
 .name span {
   font-size: 16px;
   font-weight: 400;
-  font-family: font1;
+  font-family: font6;
 }
 #Anirudh a {
   padding: 0px;
 }
-
+.popular-album .container-head{
+  margin-top: 2px;
+}
+.Popular-radio .container-head{
+  margin-top: 25px;
+}
+.Featured-Charts .container-head{
+  margin-top: 2px;
+}
 .scrollable-container {
   display: flex;
   gap: 0px;
@@ -181,6 +210,7 @@ min-width: 152px;
   margin-block: 0px;
   overflow-wrap: break-word;
   list-style-type: none;
+  text-wrap: wrap;
 }
 .footer-containers p {
   font-size: 1rem;
@@ -188,6 +218,7 @@ min-width: 152px;
   font-family: font3;
   color: #fff;
   margin: 0px;
+  text-wrap: wrap;
 }
 .footer-containers li {
   margin: 8px 0px;
@@ -195,11 +226,13 @@ min-width: 152px;
   font-size: 0.6875rem;
   font-family: font1;
   color: #a7a7a7;
+  text-wrap: wrap;
 }
 .footer-containers span {
   font-size: 1rem;
   font-weight: 400;
   padding-block-end: 8px;
+   text-wrap: wrap;
 }
 .social-media {
   margin-bottom: 35px;
@@ -235,7 +268,7 @@ hr {
 .legal span {
   font-size: 14px;
   font-weight: 400;
-  font-family: font1;
+  font-family: font6;
   margin-bottom: 8px;
   margin-right: 16px;
 }
@@ -247,7 +280,7 @@ hr {
   padding-right: 16px;
   font-size: 14px;
   font-weight: 400;
-  font-family: font1;
+  font-family: font6;
 }
 .english {
   padding-top: 16px;
@@ -267,7 +300,7 @@ hr {
 .english-text {
   color: #fff;
   font-size: 13px;
-  font-family: font3;
+  font-family: font5;
 }
 .english button {
   border: 1px solid #878787;
@@ -329,7 +362,7 @@ hr {
     font-family: font1;
   }
   .name {
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 0;
   }
   body {
@@ -411,7 +444,10 @@ hr {
   .home-flex span,
   .search-flex span {
     color: #fff;
-    font-family: font3;
+    font-family: font5;
+  }
+  .search-flex span{
+    color: #b3b3b3;
   }
   .home-flex svg,
   .search-flex svg {
@@ -452,9 +488,11 @@ hr {
     color: #a7a7a7;
     font-size: 16px;
     padding: 4px 8px;
-    font-family: font3;
+    font-family: font5;
   }
   .your-library-plus {
+    margin-top: 3px;
+    margin-right: 8px;
   }
   .left-side-bar-flex {
     overflow: hidden;
@@ -464,7 +502,7 @@ hr {
     margin-bottom: 0px;
     margin-left: 0px;
     padding: 0px;
-    gap: 25px;
+    gap: 8px;
     padding: 0px 8px;
     flex-direction: column;
     overflow-y: scroll;
@@ -477,8 +515,9 @@ hr {
     align-items: flex-start;
     border-radius: 8px;
     padding: 16px 20px;
-    background-color: #242424;
+    background-color: #1f1f1f;
     white-space: nowrap  ;
+    margin-top:16px;
   }
   .playlist-contents {
     display: flex;
@@ -488,12 +527,12 @@ hr {
   .playlist-head {
     color: #fff;
     font-size: 16px;
-    font-family: font3;
+    font-family: font5;
   }
   .playlist-sub-head {
     color: #fff;
     font-size: 14px;
-    font-family: font1;
+    font-family: font6;
     margin-bottom: 12px;
   }
   .create-playlist {
@@ -501,12 +540,13 @@ hr {
     padding: 4px 16px;
     border-radius: 30px;
     font-size: 14px;
-    font-family: font3;
-    width: 126.66px;
+    font-family: font5;
+    width: 125.55px;
+    /* width: 126.66px; */
     height: 32px;
   }
   #prodcast{
-    width: 142.95px;
+    width: 142.39px;
   }
   .find-podcast {
     border: none;
@@ -516,8 +556,8 @@ hr {
     font-family: font3;
   }
   .left-side-bar-footer {
-    margin: 177px 0px;
-    margin-bottom: 0;
+    /* margin: 177px 0px; */
+    margin-bottom: 32px;
     padding: 0 24px;
     text-align: start;
   }
@@ -530,14 +570,27 @@ hr {
   }
   .legal span {
     font-size: 11px;
-    font-family: font1;
+    font-family: font6;
+  }
+  .footer-last-elements{
+    grid-column:  span 5;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+  }
+  /* .footer-last-elements::before{
+    content: "";
+    border-top: 1px solid #fff;
+
+    width: 10;
+  } */
+  .hidden-side-bar-en{
+    display: none;
   }
   .cookies {
     margin-inline-end: 16px;
     color: #b3b3b3;
     font-size: 12px;
     line-height: 20px;
-    font-family: font1;
+    font-family: font6;
   }
   .english button {
     margin-top: 15px;
@@ -561,19 +614,28 @@ hr {
     margin: 0 0 4px;
     color: #fff;
   }
+  #forward-arrow svg{
+    fill: #fff;
+    opacity: 1;
+  }
   .preview-spotify .head {
     font-weight: 700;
-    font-family: font3;
+    font-family: font5;
     font-size: 14px;
     margin: 0px;
+    /* letter-spacing: -0.2px; */
   }
   .preview-spotify .text {
     font-weight: 400;
-    font-family: font1;
+    font-family: font6;
     margin: 0px;
+    /* text-wrap: nowrap; */
+  }
+  .spotify svg{
+    fill: #fff;
   }
   .sign-up-button span {
-    font-family: font3;
+    font-family: font5;
     font-size: 16px;
     display: flex;
     margin: 0px;
@@ -585,12 +647,16 @@ hr {
     padding: 11px 24px 7px 15px;
     background: linear-gradient(to right, #af2896, #509bf5);
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     flex-direction: row;
     align-items: center;
     gap: 24px;
     justify-content: space-between;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
     z-index: 1;
     height: fit-content;
   }
@@ -664,12 +730,19 @@ hr {
     flex-grow: 1;
   }
   #for-mobile-footer {
-    display: flex;
+    /* display: flex; */
     padding: 0;
     margin: 0;
     gap: 10px;
-    justify-content: space-between;
-    min-width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    /* justify-content: space-between; */
+    padding: 58px 32px 72px;
+    padding-right: 0px;
+    margin-left: 8px;
+    /* min-width: 100%;
+    max-width: 860px; */
+    background-color: #121212;
   }
   #for-mobile-footer .legal {
     display: none;
@@ -680,6 +753,31 @@ hr {
     justify-content: flex-end;
     flex-wrap: nowrap;
   }
+  .footer-containers-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-containers-flex1{
+    gap: 0;
+  }
+  .footer-containers-flex1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-containers{
+    margin-right: 24px;
+    margin-bottom: 32px;
+  }
+  .social-media{
+    display: flex;
+    width: fit-content;
+  }
+  .instagram,
+.twitter,
+.facebook {
+  padding-right: 12px;
+  display: block;
+}
   .signup,
   .login {
     background-color: transparent;
@@ -696,7 +794,7 @@ hr {
   .signup span,
   .login span {
     font-size: 16px;
-    font-family: font3;
+    font-family: font5;
   }
   .login {
     background-color: #fff;
@@ -707,13 +805,26 @@ hr {
   .container-head {
     margin-top: 37px;
     margin-left: 16px;
+    position: relative;
   }
-
+  .container-head  ::after{
+    content: "Show all";
+    position: absolute;
+    right: 32px;
+    color: #b3b3b3;
+    font-family: font5;
+    font-size: 14px;
+    top: 1px;
+    }
   .container-head h2 {
     font-size: 16px;
+    font-family: font8;
   }
   .card-flexes {
     padding: 0;
+  }
+  .footer-last-elements{
+    padding-top: 35px;
   }
   .container {
     max-width: 100%;
@@ -732,9 +843,10 @@ hr {
     grid-template-columns: repeat(2, 1fr);
     /* overflow: hidden; */
     /* margin-left: 0; */
-    padding: 4px;
-    padding-top: 2px;
-    margin-left: 4px;
+    /* padding: 4px; */
+    padding-top: 0px;
+    margin-left: 3px;
+    margin-right: 15px;
   }
   .artist-card:nth-child(n + 3) {
     display: none;
@@ -751,6 +863,9 @@ hr {
     padding-top: 16px;
     margin-top: 4px;
   }
+  .name span{
+    font-family: font6;
+  }
   #sajini .name a span,
   #sajini .artist span {
     text-overflow: ellipsis;
@@ -761,7 +876,7 @@ hr {
     display: flex;
     justify-content: center;
     max-width: 100%;
-    min-width:152px;
+    min-width:143.33px;
   }
   #first-container {
     margin-top: 0;
@@ -770,14 +885,37 @@ hr {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), #121212);
   }
   .artist {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
   }
   
   .artist span {
-    display: inline-block;
+   font-family: font6;
     max-width: 100%;
   }
+  .left-side-bar-flex-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .artist,.name{
+    margin-left: 1px;
+  }
+  #Arjit .card-image img{
+    background-color:#CC495F; 
+    background-position: right;
+  }
+  .popular-album::before,.Popular-radio::before{
+    content: "";
+    height: 8px;
+
+  }
   
+}
+@media(min-width:883px){
+  /* .sign-up-button{
+    width: 152.98px;
+  } */
 }
